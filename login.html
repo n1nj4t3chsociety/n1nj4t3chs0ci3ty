@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1NJ4 WEB - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fonte pixelada -->
+    <style>
+        /* CSS para estilo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #00ff00;
+            background: #000;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #00ff00;
+            width: 0;
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #00ff00; }
+        }
+        .tech-name {
+            font-family: 'Press Start 2P', cursive; /* Fonte pixelada */
+            font-size: 6rem;
+            color: #ff3399; /* Rosa-choque */
+            font-weight: bold;
+            margin-top: 20px;
+            z-index: 1;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; /* Efeito de borda verde-limão */
+        }
+        .login-form {
+            margin-top: 20px;
+        }
+        .login-form input[type="password"] {
+            padding: 10px;
+            font-size: 1.5rem;
+            border: 2px solid #00ff00;
+            background: #000;
+            color: #00ff00;
+            border-radius: 5px;
+            font-family: 'Press Start 2P', cursive;
+        }
+        .login-form button {
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            border: 2px solid #ff3399;
+            background: #000;
+            color: #ff3399;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+        }
+        .login-form button:hover {
+            background: #ff3399;
+            color: #000;
+        }
+        .hint {
+            margin-top: 10px;
+            color: #ffd700; /* Dourado */
+            font-size: 1rem;
+        }
+        .v-image {
+            margin-top: 20px;
+        }
+        .v-image img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="typewriter">Login</h1>
+        <div class="tech-name">N1NJ4 TECH</div> <!-- Nome com cor rosa-choque e borda verde-limão -->
+        <div class="login-form">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="checkPassword()">Login</button>
+            <div class="hint">Hint: The password is the word for 'unknown' or 'unnamed'.</div>
+        </div>
+        <div class="v-image">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F24871129%2Fr%2Fil%2F749226%2F2833087435%2Fil_fullxfull.2833087435_ebnr.jpg&f=1&nofb=1&ipt=5552c15cae87230d4ee3699dcbf45d746eb5e8ced52348081523654b5676b653&ipo=images" alt="Anonymous Mask">
+        </div>
+    </div>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === 'anonymous') {
+                window.location.href = 'privacy.html'; // Redireciona para a página de privacidade
+            } else {
+                alert('Access Denied');
+            }
+        }
+    </script>
+</body>
+</html>
