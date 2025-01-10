@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1NJ4 WEB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fonte pixelada -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #00ff00;
+            background: #000;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #00ff00;
+            width: 0;
+        }
+        .tech-name {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 6rem;
+            color: #ff3399;
+            font-weight: bold;
+            margin-top: 20px;
+            z-index: 1;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            border: 2px solid #ff3399;
+            background: #000;
+            color: #ff3399;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+            margin: 10px;
+        }
+        .button-container button:hover {
+            background: #ff3399;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="typewriter"></h1>
+        <div class="tech-name" style="display: none;">N1NJ4 TECH</div>
+        <div class="button-container">
+            <button onclick="window.location.href='login.html'">Login</button>
+            <button onclick="window.location.href='services.html'">Serviços</button>
+        </div>
+    </div>
+    <script>
+        // Seu JavaScript existente
+    </script>
+</body>
+</html>
