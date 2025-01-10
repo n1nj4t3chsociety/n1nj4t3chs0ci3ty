@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1NJ4 TECH - Serviços</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', cursive;
+            color: #ccff00; /* Verde-limão */
+            background: #000;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            z-index: 1;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #ff3399; /* Rosa-choque */
+            width: 0;
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #ff3399; } /* Rosa-choque */
+        }
+        .tech-name {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 4rem;
+            color: #ff3399; /* Rosa-choque */
+            font-weight: bold;
+            margin-top: 20px;
+            z-index: 1;
+            text-shadow: 0 0 10px #ccff00, 0 0 20px #ccff00, 0 0 30px #ccff00; /* Efeito de borda verde-limão */
+        }
+        .services-list {
+            margin-top: 20px;
+            text-align: left;
+            font-family: Arial, sans-serif; /* Fonte mais limpa */
+            font-size: 0.8rem; /* Fonte menor */
+            color: #ffd700; /* Dourado */
+            max-height: 60vh;
+            overflow-y: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px #ff3399, 0 0 20px #ff3399, 0 0 30px #ff3399; /* Rosa-choque */
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            width: 80%;
+        }
+        .services-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services-list li {
+            margin: 10px 0;
+        }
+        .service-title {
+            font-weight: bold;
+            color: #ccff00; /* Verde-limão */
+        }
+        .service-description {
+            color: #ffd700; /* Dourado */
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+    <div class="container">
+        <h1 id="typewriter">Serviços Digitais</h1>
+        <div class="tech-name">N1NJ4 TECH</div>
+        <div class="services-list">
+            <ul>
+                <li>
+                    <div class="service-title">Análise de Vulnerabilidades e Testes de Penetração</div>
+                    <div class="service-description">Identificamos falhas de segurança em sistemas, redes e aplicações por meio de testes avançados de penetração. Garantimos a proteção de dados sensíveis e prevenimos acessos não autorizados.</div>
+                </li>
+                <li>
+                    <div class="service-title">Consultoria em Segurança Cibernética</div>
+                    <div class="service-description">Ajudamos empresas a desenvolver estratégias de cibersegurança, implementando políticas eficazes de proteção digital e conformidade com regulamentações, como LGPD e GDPR.</div>
+                </li>
+                <li>
+                    <div class="service-title">Monitoramento e Resposta a Incidentes</div>
+                    <div class="service-description">Oferecemos serviços de monitoramento 24/7 para detectar e mitigar ameaças cibernéticas em tempo real. Nossa equipe especializada atua rapidamente para minimizar impactos em caso de incidentes.</div>
+                </li>
+                <li>
+                    <div class="service-title">Treinamento em Hacking Ético e Segurança Cibernética</div>
+                    <div class="service-description">Capacitamos equipes e indivíduos em práticas de hacking ético, segurança de redes e desenvolvimento seguro. Treinamentos personalizáveis para atender às necessidades do cliente.</div>
+                </li>
+                <li>
+                    <div class="service-title">Desenvolvimento de Soluções de IA Personalizadas</div>
+                    <div class="service-description">Criamos ferramentas inteligentes sob medida para análise de dados, automação de processos e predição de riscos, aumentando a eficiência operacional de nossos clientes.</div>
+                </li>
+                <li>
+                    <div class="service-title">Auditoria de Sistemas Baseada em IA</div>
+                    <div class="service-description">Utilizamos inteligência artificial para auditar e otimizar sistemas, identificando ineficiências e vulnerabilidades que podem ser exploradas por invasores.</div>
+                </li>
+                <li>
+                    <div class="service-title">Análise Forense Digital</div>
+                    <div class="service-description">Investigamos ataques cibernéticos, vazamentos de dados e atividades maliciosas, coletando evidências digitais para suportar ações legais e reforçar a segurança.</div>
+                </li>
+                <li>
+                    <div class="service-title">Gestão de Riscos e Planejamento de Continuidade</div>
+                    <div class="service-description">Auxiliamos na identificação e mitigação de riscos digitais, além de desenvolver planos de continuidade para manter a operação em caso de ataques ou falhas no sistema.</div>
+                </li>
+                <li>
+                    <div class="service-title">Desenvolvimento de Bots e Scripts para Automação</div>
+                    <div class="service-description">Criamos scripts e bots personalizados para automação de tarefas repetitivas, otimizando fluxos de trabalho e melhorando a produtividade de nossos clientes.</div>
+                </li>
+                <li>
+                    <div class="service-title">Edição Profissional de Vídeos</div>
+                    <div class="service-description">Transformamos suas ideias em vídeos impactantes. Oferecemos edição profissional para conteúdos corporativos, promocionais, educacionais ou para redes sociais. Incluímos cortes, efeitos visuais, animações e ajustes de áudio.</div>
+                </li>
+                <li>
+                    <div class="service-title">Design Gráfico Personalizado</div>
+                    <div class="service-description">Criamos identidades visuais marcantes, incluindo logotipos, banners, materiais para impressão e layouts para redes sociais. Nossos designs são alinhados às necessidades e objetivos do cliente.</div>
+                </li>
+                <li>
+                    <div class="service-title">Web Design e Desenvolvimento de Sites</div>
+                    <div class="service-description">Projetamos e desenvolvemos sites modernos, responsivos e otimizados para SEO. Ideal para empresas, lojas virtuais, portfólios ou blogs. Garantimos uma navegação intuitiva e visual atraente.</div>
+                </li>
+                <li>
+                    <div class="service-title">Criação de Aplicativos Sob Medida</div>
+                    <div class="service-description">Desenvolvemos aplicativos móveis para Android e iOS, adaptados às necessidades do seu negócio. Seja para e-commerce, serviços ou entretenimento, garantimos funcionalidade e design intuitivo.</div>
+                </li>
+                <li>
+                    <div class="service-title">Marketing Digital e Gestão de Anúncios</div>
+                    <div class="service-description">Planejamos e executamos estratégias de marketing digital para aumentar a visibilidade da sua marca. Incluímos gerenciamento de campanhas no Google Ads,
